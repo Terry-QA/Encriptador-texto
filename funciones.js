@@ -1,4 +1,16 @@
 /* DECLARANDO Y DEFINIENDO*/
+//para evitar pegar caracteres especiales y mayusculas
+document.getElementById('input').addEventListener('paste', function(event) {
+    event.preventDefault();
+    var clipboardData = event.clipboardData || window.clipboardData;
+    var pastedText = clipboardData.getData('text');
+    // Reemplazar caracteres no permitidos
+    pastedText = pastedText.toLowerCase().replace(/[^a-z\s]/g, '');
+    // Insertar el texto limpio en el textarea
+    var selectionStart = this.selectionStart;
+    var selectionEnd = this.selectionEnd;
+    this.value = this.value.substring(0, selectionStart) + pastedText + this.value.substring(selectionEnd);
+});
 
 let llavesEncriptado ={
     a: "ai",
@@ -7,6 +19,8 @@ let llavesEncriptado ={
     o: "ober",
     u: "ufat"
 }
+
+
 
 let indicesLlaves = Object.keys(llavesEncriptado);
 
