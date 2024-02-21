@@ -48,7 +48,6 @@ footer{
     height: 10vh;
     text-align: center;
     font-size:larger;
-    display: block;
 }
 
 .btn{
@@ -122,9 +121,10 @@ footer{
 .logo{
     padding: 0px;
     margin: 0px;
-    height: 55px;
-
+    height: 40px;
+    width: 90px;
 }
+
 .bold{
     font-weight: bold;
 }
@@ -164,7 +164,7 @@ footer{
     color: #0A3871;
 }
 .output-text{
-    height: 300px;
+    height: 130px;
     border: none;
 }
 
@@ -190,7 +190,7 @@ footer{
 .item-out{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -200,6 +200,7 @@ footer{
     background-color: white;
     box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.20);
     border-radius: 25px ;
+    z-index: 10;
 }
 
 .list-btn{
@@ -220,10 +221,7 @@ footer{
     textarea{
         padding: 2.5rem 1rem;
     }
-    .output-text{
-        height: 355px;
-        border: none;
-    }
+
     .item-inp{
         padding: 40px;
     }
@@ -243,9 +241,20 @@ footer{
         height: 70%;
         width: 80%;
     }
+    .item-out{
+        gap: 10px;
+    }
+    
     .item-inp{
         padding: 20px;
     }
- 
+    .output-text{
+        height: 355px;
+        border: none;
+    }
+    .logo{
+        height: 55px;
+        width: auto;
+    }
 
 }
