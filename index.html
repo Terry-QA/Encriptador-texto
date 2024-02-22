@@ -14,9 +14,7 @@
             <div class="banner1">
                 <img class="logo" src="img/Logo.svg" alt="">
                 <div class="text-int">
-                    <textarea class="input-text" type="text" name="" id="input" placeholder="Ingrese el texto aquí" oninput="this.value = this.value.toLowerCase().replace(/ñ/g, 'ny');" onkeypress="if ((event.charCode >= 97 && event.charCode <= 122) || event.charCode === 32 || (event.charCode >= 97 && event.charCode <= 122)) return true; else return false;"></textarea>
-
-
+                    <textarea class="input-text" type="text" name="" id="input" placeholder="Ingrese el texto aquí" oninput="this.value = this.value.toLowerCase().replace(/ñ/g, 'ny');" onkeypress="if ((event.charCode >= 97 && event.charCode <= 122) || event.charCode === 32) return true; else if (event.charCode >= 48 && event.charCode <= 57) return false; else return false;"></textarea>
                     <!-- 
                         evento onkeypress : se ejecuta evento cuando se presiona un boton
                          event.charcode: captura el codigo ascii de la tecla presionada
