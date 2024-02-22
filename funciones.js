@@ -12,6 +12,13 @@ document.getElementById('input').addEventListener('paste', function(event) {
     this.value = this.value.substring(0, selectionStart) + pastedText + this.value.substring(selectionEnd);
 });
 
+//Elimina caracteres especiales ingresados por movil y numeros
+function sanitizeInput(event) {
+    var textarea = event.target;
+    var sanitizedText = textarea.value.toLowerCase().replace(/ñ/g, 'ny').replace(/[^a-z\s]/g, '');
+    textarea.value = sanitizedText;
+}
+
 let llavesEncriptado ={
     a: "ai",
     e: "enter",
