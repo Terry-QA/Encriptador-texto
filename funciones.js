@@ -12,6 +12,60 @@ document.getElementById('input').addEventListener('paste', function(event) {
     this.value = this.value.substring(0, selectionStart) + pastedText + this.value.substring(selectionEnd);
 });
 
+document.addEventListener('DOMContentLoaded', function(){
+var colorSelector = document.getElementById("color-pagina");
+var body = document.getElementsByTagName("body")[0];
+var item_int = document.getElementsByClassName("item-inp")[0];
+var item_out = document.getElementsByClassName("item-out")[0];
+var img_out = document.getElementsByClassName("img-out")[0];
+
+colorSelector.addEventListener("change",function (){
+    var selectColor = colorSelector.value;
+
+    let colores = ["Dia","Noche","Tarde","Frio","Selva"];
+
+    for(var i =0; i<colores.length; i++){
+
+            if(body.classList.length===0){
+                body.classList.add(selectColor);
+                item_int.classList.add(selectColor);
+                item_out.classList.add(selectColor);
+                img_out.classList.add(selectColor);
+
+                break;
+            }else{
+                if(body.classList.contains(colores[i])){
+                    body.classList.remove(colores[i]);
+                    body.classList.add(selectColor);
+
+                    item_out.classList.remove(colores[i]);
+                    item_out.classList.add(selectColor);
+
+                    img_out.classList.remove(colores[i]);
+                    img_out.classList.add(selectColor);
+                    break;
+                }
+                if(body.classList.contains("Dia")){
+                    body.classList.remove("Dia");
+                    body.classList.add(selectColor);
+
+                    item_out.classList.remove("Dia");
+                    item_out.classList.add(selectColor);
+
+                    img_out.classList.remove("Dia");
+                    img_out.classList.add(selectColor);
+                    break;
+                }
+            }
+
+    }
+    img_out.src=`img/${selectColor}.png`;
+});
+
+
+});
+
+
 function sanitizeInput(event) {
     var textarea = event.target;
     var sanitizedText = textarea.value.toLowerCase().replace(/ñ/g, 'ny').replace(/[^a-z\s]/g, '');
@@ -38,7 +92,7 @@ function copiar(){
     if(isNaN(btnCopy)===true){
         btnCopy.classList.remove("btn-2");
         btnCopy.classList.add("btn-copiado");
-        btnCopy.innerHTML="Copiado";
+        btnCopy.innerHTML="Texto Copiado";
     }
 
 

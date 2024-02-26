@@ -1,0 +1,55 @@
+:root{
+    --color-background: #f3f5fc;
+
+    --color-principal:#0A3871;
+    --color-secundario: white;
+
+    --color-titulo: #0A3871;
+    --color-texto: black;
+
+}
+
+body {
+    background: var(--color-background); /* Color de fondo predeterminado */
+}
+
+
+body.Noche {
+    --color-background: #1d1d20;
+    
+    --color-principal:#3ccfe9;
+    --color-secundario: rgb(41, 56, 56);
+
+    --color-titulo: #3ccfe9;
+    --color-texto: rgb(225, 225, 225);
+}
+
+body.Tarde{
+    --color-background: linear-gradient(to bottom, #260101 80%, #D43F6E);
+    
+    --color-principal:#E080BC;
+    --color-secundario: rgba(255, 255, 255, 0.272);
+
+    --color-titulo: #E080BC;
+    --color-texto: rgb(225, 225, 225);
+}
+
+body.Frio{
+    --color-background: linear-gradient(to bottom, #011C26 75%, #0388A6);
+    
+    --color-principal:#0388A6;
+    --color-secundario: rgba(255, 255, 255, 0.272);
+
+    --color-titulo: #0388A6;
+    --color-texto: rgb(225, 225, 225);
+}
+
+body.Selva{
+    --color-background: linear-gradient(to bottom, #0d0d0d  40%, #735439);
+    
+    --color-principal:#F2C879;
+    --color-secundario: rgba(255, 255, 255, 0.190);
+
+    --color-titulo: #F2C879;
+    --color-texto: rgb(225, 225, 225);
+}

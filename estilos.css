@@ -10,8 +10,10 @@ p{
     height: 19px;
 }
 
-body{
-    background-color:#f3f5fc;
+select{
+    border-radius: 1rem;
+    height: 40px;
+    width: 85px;
 }
 
 label{
@@ -21,10 +23,9 @@ label{
 }
 
 textarea{
-
     width:90%;
-    height: 60%;
-    display: block;
+    height:60%;
+    display:block;
     font-size:xx-large;
     font-family: monospace;
     font-weight: bold;
@@ -50,12 +51,22 @@ footer{
     font-size:larger;
 }
 
+span, p, h3{
+    color: var(--color-texto);
+}
+
+.cabeza{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .btn{
     width: 100%;
     padding-top: 18px;
     padding-bottom: 18px;
 
-    border: 1px solid #0A3871;
+    border: 1px solid var(--color-principal);
     border-radius: 30px 30px 30px 30px;
 
     font-family: monospace;
@@ -66,14 +77,15 @@ footer{
 }
 
 .btn-1{
-    background-color: #0A3871;
+    /*background-color: #009a7e;*/
+    background-color: var(--color-principal);
     color: white;
     transition: 0.5s;
 }
 
 .btn-2{
     background-color: transparent;
-    color: #1152a1;
+    color: var(--color-principal);
     transition: 0.5s;
     animation-delay: 5s;
 }
@@ -118,11 +130,12 @@ footer{
     height: 90vh;
 }
 
-.logo{
+.logo path{
     padding: 0px;
     margin: 0px;
     height: 40px;
     width: 90px;
+    fill:var(--color-principal);
 }
 
 .bold{
@@ -130,15 +143,17 @@ footer{
 }
 
 .img-out{
-    height: 450px;
-    width: 200px;
+    height: 480px;
+    width:400px;
 }
+
 .item-out img{
     display: none;
 }
 
 .icon{
     height: 30px;
+    fill:var(--color-texto);
 }
 
 .icon:hover{
@@ -156,16 +171,16 @@ footer{
 
     /*margin: 2rem;*/
     /*padding: 30px 30px 30px 30px; /* Espacio alrededor del texto */
-    
-
-    color:#0A3871;
+    color:var(--color-titulo);
 }
 .input-text::placeholder{
-    color: #0A3871;
+    color: var(--color-titulo);
+    /*color:#04BF9D;*/
 }
 .output-text{
     height: 130px;
     border: none;
+    color: var(--color-texto);
 }
 
 .exclamacion{
@@ -197,8 +212,8 @@ footer{
 
     padding: 2rem;
 
-    background-color: white;
-    box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.20);
+    background-color: var(--color-secundario);
+    box-shadow: 1px 10px 30px -10px rgba(0, 0, 0, 0.154);
     border-radius: 25px ;
     z-index: 10;
 }
@@ -239,7 +254,7 @@ footer{
     .item-out img{
         display: unset;
         height: 70%;
-        width: 80%;
+        width: 90%;
     }
     .item-out{
         gap: 10px;
@@ -258,3 +273,4 @@ footer{
     }
 
 }
+
